@@ -1,0 +1,55 @@
+.ms-display-none {
+  display: none;
+}
+
+.position {
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+}
+/* Flex  */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-s-between {
+  justify-content: space-between;
+}
+
+.justify-s-around {
+  justify-content: space-around;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-left {
+  justify-content: left;
+}
+
+.text-align{
+  text-align: left;
+}
+
+.flex-direction{
+flex-direction: column;
+}
+
+.pstFixed{
+  position: fixed;
+  z-index: 1000;
+  /* background-color: var(--primary-light-color); */
+  /* width: 100%; */
+}

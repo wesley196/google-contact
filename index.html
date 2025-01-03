@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Google Contact</title>
+  </head>
+
+  <body class="bg-page-full">
+    <header
+      class="flex padding-container justify-s-between sd-padding-container "
+    >
+      <div class="flex justify-s-between items-center w-8">
+        <div id="burger-menu" class="pointer icon transition">
+          <span class="material-symbols-outlined"> Menu</span>
+        </div>
+        <div class="w-4rem">
+          <img
+            src="assets/images/logo.png"
+            alt="Google contact logo"
+            srcset=""
+          />
+        </div>
+        <h1 class="title title-level-1">Contacts</h1>
+      </div>
+      <div
+        class="w-90 md-w-70 flex justify-start items-center md-justify-flex-end"
+      >
+        <div class="flex input-field items-center">
+          <div class="pointer icon justify-center items-center">
+            <span class="material-symbols-outlined"> search </span>
+          </div>
+          <input
+            type="text"
+            name="searchInput"
+            id="searchInput"
+            placeholder="Recherche"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="flex padding-container justify-s-between">
+      <!-- sidebar section -->
+      <section id="side-bar" class="w-15">
+        <div>
+          <button
+            type="button"
+            id="btnCreateContact"
+            class="button flex items-center contain button-radius-07 button-hover-shadow"
+          >
+            <span class="material-symbols-outlined margin-right-04rem">
+              add
+            </span>
+            Créer un contact
+          </button>
+        </div>
+
+        <div class="padding-top-bottom-1rem">
+          <button
+            type="button"
+            class="button justify-s-between flex items-center button-hover-bg-color button-radius-10 w-100"
+            id="btnAfficherContact"
+          >
+            <p class="flex items-center justify-s-between">
+              <span class="material-symbols-outlined margin-right-04rem">
+                person
+              </span>
+              Contact
+            </p>
+
+            <span id="Contacts"> 0</span>
+          </button>
+          <button
+            type="button"
+            class="button flex items-center button-hover-bg-color button-radius-10 w-100 margin-top-bottom-1rem"
+          >
+            <span class="material-symbols-outlined margin-right-04rem">
+              history </span
+            >Fréquents
+          </button>
+        </div>
+        <div>
+          <div class="flex justify-s-between items-center">
+            <h3 class="text title-level-3">Libellés</h3>
+            <div class="pointer icon transition"> 
+              <button id="btnPop" class="button">
+              <span class="material-symbols-outlined"> add </span>
+            </button>
+            </div>
+          </div>
+        </div>
+              <!-- liste Libelle -->
+          <div class="listLibele"></div>
+      </section>
+                  <!-- end sidebar sectio  -->
+
+      <section id="main-section" class="w-90 main-section md-w-100">
+        <h3 id="contactTitle" class="title title-level-1">Contacts <span id="mesContacts">(0)</span></h3>
+        <div class="contact-container">
+
+            <!-- contact vide -->
+
+            <div id="contactContainer" class="flex justify-center items-center flex-direction">
+            <div class="illus-size-2rem">
+              <img
+                src="./assets/illustrations/emptycontacts_animation_cell4.png"
+                alt="Empty contact illustration"
+              />
+            </div>
+            <p class="text text-align-center">Aucun contact</p>
+            <div
+              class="flex justify-center items-center margin-top-bottom-1rem"
+            >
+              <button
+                id="btnCreateContact3"
+                class="button button-radius-10 no-border flex items-center"
+                type="button"
+              >
+                <span class="material-symbols-outlined margin-right-04rem">
+                  person
+                </span>
+                Créer un contact
+              </button>
+            </div>
+            </div>
+            <!-- end contact vide -->
+
+            <!-- Tableau contact -->
+            <div id="listContacts" class="md-display-none">
+              <div class="tableau">
+                  <table id="tableauContact">
+              <thead>
+                <tr>
+                  <th>Titre</th>
+                  <th>E-mail</th>
+                  <th>Numéro de téléphone</th>
+                  <th>Fonction et entreprise</th>
+                  <th>Libellé</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                
+              </tbody>
+                  </table>
+               </div>
+
+            </div>
+            <!--end Tableau contact  -->
+
+            <!-- AJout contact -->
+            <div id="ajoutContact" class="ajoutContact md-display-none">
+
+              <div class="formulaire">
+                <form action="" method="">
+                     <div class="inputForm imgDiv pd-top-bottom-10px">
+                      <img src="assets/images/defaultimg.jpg" alt="" class="imgLogo">
+                        <label for="inputLabel" class="fileLabel">
+                          <span class="material-symbols-outlined">add</span>
+                          <input type="file" name="file" id="inputLabel" hidden>
+                        </label>
+                    </div>
+
+                     <div class="inputForm pd-top-bottom-10px">
+                      
+                      <select class="padding-input" name="libelle" id="selectLibelle">
+                         <option value="">Libellé</option>
+                      </select>
+                      
+                    </div>
+
+                     <div class="inputForm pd-top-bottom-10px">
+                      
+                        <input class="padding-input" type="text" name="Prenom" placeholder="Prénom" id="prenom">
+                    </div>
+                    
+                    <div class="inputForm pd-top-bottom-10px">
+                 
+                       <input class="padding-input" type="text" name="nom" placeholder="Nom" id="nom">
+                   </div>
+
+                   <div class="inputForm pd-top-bottom-10px">
+                     
+                      <input class="padding-input" type="text" name="Entreprise" placeholder="entreprise" id="entreprise">
+                  </div>
+
+                  <div class="inputForm pd-top-bottom-10px">
+                    
+                     <input class="padding-input" type="text" name="fonction" placeholder="Fonction" id="fonction">
+                 </div>
+
+                 <div class="inputForm pd-top-bottom-10px">
+                   
+                    <input class="padding-input" type="email" name="email" placeholder="email" id="email">
+                </div>
+                 <div class="inputForm pd-top-bottom-10px">
+                   
+                    <input class="padding-input" type="number" name="number" placeholder="Numéro" id="numero">
+                </div>
+                </form>
+                <div class="inputForm pd-top-bottom-10px">
+                  <button id="ajouter" class="btnAjoutContact"> Enregistrer</button>
+              </div>
+              </div>
+            </div> 
+            <!-- end ajout contact -->
+
+            <!-- Button Pop -->
+            <div id="popup" class="hidden">
+              <div class="popup-content">
+               <p>Créer un libellé</p>
+                  <div class="inputPop">
+                    <fieldset>
+                      <legend>creer</legend>
+                      <input type="text" id="inputLibele" class="inputLibelle">
+                    </fieldset>
+                  </div>
+                  <div class="btnPop">
+                      <button id="closePopup" class="button text-color">Non, ne rien faire</button>
+                      <button id="addLibelle" class="button text-color">Enregistrer</button>
+                  </div>
+              </div>
+          </div>
+            <!-- end Button POP -->
+        </div>
+      </section>
+    </main>
+    <div class="position display-none md-display-block">
+      <button
+        id="btnCreateContact2"
+        type="button"
+        class="button flex items-center contain button-radius-07 button-shadow"
+      >
+        <span class="material-symbols-outlined"> add </span>
+      </button>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

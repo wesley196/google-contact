@@ -1,0 +1,88 @@
+  table{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  
+.tableau{
+    display: flex;
+    justify-content: center;
+    background-color: #fff5;
+    /* width: 90vw; */
+    /* backdrop-filter: blur(7px); */
+    /* box-shadow: 0 .4rem .8rem #0005; l'ombre */  
+    /* border-radius: .8rem; */
+
+    overflow: auto; 
+}
+
+.tableau::-webkit-scrollbar{
+    width: auto;
+    height: 0.5rem;
+}
+
+.tableau::-webkit-scrollbar-thumb{
+    /* border-radius: .5rem; */
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.tableau:hover::-webkit-scrollbar-thumb{
+  visibility: visible;
+}
+
+
+
+table, th, td{
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+td img{
+     width: 36px;
+     height: 36px;
+     margin-right: .5rem;
+     border-radius: 50%;
+     vertical-align: middle;
+
+}
+
+
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* padding-left: 0;
+    padding-right: 0; */
+    /* background-color: #d5d1defe; */
+    border-bottom: 1px solid #000; /* Couleur et épaisseur de la bordure */
+}
+
+tbody tr:nth-child(even) {
+
+    background-color: #0000000b;
+}
+
+tbody tr:hover {
+    background-color: #fff6;
+}
+
+.divProfile{
+    background-color: var(--primary-color);
+    color: #fff; /* Couleur du text */
+    width: 40px;
+    height: 40px; 
+    padding-top: 10px;
+    border-radius: 50%; 
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour le relief */
+    /* cursor: pointer; */
+    /* transition: background-color 0.3s ease, transform 0.2s ease; */
+}
+  
